@@ -12,6 +12,9 @@ export default {
         'secondary': '#06202B',
         'tertiary': '#014E7E',
         'accent': '#01BF9B'
+      },
+      backgroundImage: {
+        'bridge-image': 'url(./assets/bridge-mobile.png)'
       }
     },
   },
