@@ -9,9 +9,9 @@ import InstructionsComponent from './components/InstructionsComponent'
       <InstructionsComponent/>
       <>
       <h2 className='font-bold text-center text-sky-700'>Instruciones</h2>
-      <p className="text-left text-sm m-30 text-black-500 font-bold p-5 ">
+      <p className="text-center text-sm m-30 text-black-500 font-bold p-5 ">
       Respondiendo preguntas sobre la preservación del agua:
-      <ul className='list-disc list-inside m-1'>
+      <ul className='list-disc list-inside m-1 text-center'>
       <li>Si respondes en un sólo intento ganas 2 gotas</li>
       <li>Si respondes en el segundo intento ganas 1 gota</li>
       <li>Si saltas la pregunta pierdes 1 gota</li>
