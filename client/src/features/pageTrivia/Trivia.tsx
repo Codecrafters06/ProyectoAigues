@@ -16,7 +16,6 @@ const Trivia: FC = () => {
       <TriviaEco2 />
       <TriviaGotas1 />
       <TriviaGotas2 />
-
     </Layout>
   );
 }
