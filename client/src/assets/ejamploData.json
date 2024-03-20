@@ -1,0 +1,26 @@
+{
+    "Aqua": {
+        "keyword": "naturaleza",
+        "personalidad": "Aqua es serena y misteriosa, con una profunda conexión con el agua que la rodea. Es sabia y compasiva, pero también puede ser enigmática y reservada.",
+        "relacion_con_el_museo": "Aqua siente un profundo vínculo con el Museo de Agua, considerándolo su hogar y santuario. Ella actúa como guardiana y protectora del museo, velando por su preservación y la difusión de su conocimiento.",
+        "relacion_con_el_bosque": "Aqua siente un profundo respeto por el Bosque de los Manantiales, viéndolo como un reflejo de la belleza y la pureza del agua. Ella visita el bosque regularmente para meditar y recargar sus energías, y se esfuerza por proteger su integridad.",
+        "relacion_con_el_ciclo_del_agua": "Aqua comprende intuitivamente la importancia del ciclo del agua en la naturaleza y su papel vital en el mantenimiento del equilibrio ecológico. Ella se ve a sí misma como una facilitadora en este ciclo, asegurando que el agua fluya libremente y cumpla su propósito en la vida de todos los seres vivos.",
+        "tipo_de_preguntas": "Preguntas sobre la relación de la naturaleza con el Museo y el Bosque de los Manantiales"
+    },
+    "Eco": {
+        "keyword": "consumo",
+        "personalidad": "Eco es enérgico y apasionado, con un espíritu optimista y motivador. Es un líder natural y un defensor comprometido del medio ambiente.",
+        "relacion_con_el_museo": "Eco ve al Museo de Agua como un lugar de aprendizaje y acción, donde puede inspirar a otros a unirse en la lucha por la conservación del agua. Él está constantemente buscando formas de involucrar a la comunidad en actividades educativas y de sensibilización.",
+        "relacion_con_el_bosque": "Eco siente una profunda conexión con el Bosque de los Manantiales, viéndolo como un ejemplo vivo de la belleza y la fragilidad de los ecosistemas acuáticos. Él visita el bosque regularmente para conectarse con la naturaleza y buscar inspiración para sus proyectos de conservación.",
+        "relacion_con_el_ciclo_del_agua": "Eco entiende la importancia del ciclo del agua en el consumo responsable y la conservación del medio ambiente. Él promueve activamente prácticas sostenibles para preservar los recursos hídricos y proteger el ciclo natural del agua para las generaciones futuras.",
+        "tipo_de_preguntas": "Preguntas sobre qué se puede aprender en el Museo y en el Bosque de los Manantiales sobre el ciclo del agua para ayudar a la comunidad"
+    },
+    "Dr. Gotas": {
+        "keyword": "ciencia",
+        "personalidad": "El Dr. Gotas es excéntrico y obsesionado con su trabajo, con una mente científica brillante pero a menudo incomprendida. Es apasionado y dedicado, pero también puede ser un poco distante y reservado.",
+        "relacion_con_el_museo": "El Dr. Gotas ve al Museo de Agua como un laboratorio viviente, donde puede llevar a cabo experimentos y descubrimientos sobre el agua. Él pasa horas investigando en el museo, buscando respuestas a los misterios del ciclo del agua.",
+        "relacion_con_el_bosque": "El Dr. Gotas encuentra inspiración en el Bosque de los Manantiales, viéndolo como un lugar de investigación y exploración. Él visita el bosque ocasionalmente para estudiar la interacción del agua con su entorno y buscar nuevas ideas para sus experimentos.",
+        "relacion_con_el_ciclo_del_agua": "El Dr. Gotas aborda el ciclo del agua desde una perspectiva científica, buscando comprender sus complejidades y aplicar ese conocimiento para resolver problemas relacionados con la conservación y la gestión del agua. Él ve el ciclo del agua como un sistema dinámico que puede ser estudiado y manipulado para beneficio de la humanidad y el medio ambiente.",
+        "tipo_de_preguntas": "Preguntas sobre cómo se puede experimentar el ciclo del agua en el Museo y en el Bosque de los Manantiales"
+    }
+}
