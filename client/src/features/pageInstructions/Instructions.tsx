@@ -8,7 +8,7 @@ import InstructionsComponent from './components/InstructionsComponent'
     <Layout>
       <InstructionsComponent/>
       <>
-      <h2 className='font-bold text-center text-sky-700'>Instruciones</h2>
+      <h2 className='m-20 font-bold text-center text-sky-700'>Instruciones</h2>
       <p className="text-center text-sm m-30 text-black-500 font-bold p-5 ">
       Respondiendo preguntas sobre la preservación del agua:
       <ul className='list-disc list-inside m-1 text-center'>
@@ -19,11 +19,9 @@ import InstructionsComponent from './components/InstructionsComponent'
       <p className='m-5'>Completa desafíos y actividades interactivas en tu propio hogar para ganar gotas extras</p>
       <p className='m-5'>Si compartes tu experiencia en las redes sociales y promueves el Museo entre amigos y familiares ganaras gotas extras</p>
       </p>
-      <div>
-      <button>
-       Siguiente
+      <button className=' h-12 absolute bottom-0 w-full flex justify-center items-center'>
+                <button className='h-8 w-auto p-1 bg-cyan-700 rounded-md'>Siguiente</button>
       </button>
-      </div>
       </>
       
       
