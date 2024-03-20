@@ -14,7 +14,7 @@ const Avatars: FC = () => {
     <Layout>
       <div className="h-screen relative" style={{ backgroundImage: `url(${backgroundImage})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
         <div className="absolute inset-0 bg-white opacity-45" style={{ zIndex: 1 }}></div>
-        <h2 className="font-bold text-center text-sky-700 font-family: " style={{ zIndex: 2 }}>Escoge quién quieres ser</h2>
+        <h2 className="font-bold text-center text-sky-700 pt-20 " style={{ zIndex: 2 }}>Escoge quién quieres ser</h2>
         <div className="flex justify-center items-center h-full flex-col" style={{ zIndex: 2 }}>
           <div className="flex justify-center space-x-4">
             <div className="flex flex-col items-center relative" style={{ zIndex: 2,  borderRadius: 0  }}>
