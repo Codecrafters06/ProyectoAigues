@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Button, Layout } from '../../components'
+import {Layout } from '../../components'
 import InstructionsComponent from './components/InstructionsComponent'
 
 
@@ -19,9 +19,11 @@ import InstructionsComponent from './components/InstructionsComponent'
       <p className='m-5'>Completa desafíos y actividades interactivas en tu propio hogar para ganar gotas extras</p>
       <p className='m-5'>Si compartes tu experiencia en las redes sociales y promueves el Museo entre amigos y familiares ganaras gotas extras</p>
       </p>
-      <Button>
+      <div>
+      <button>
        Siguiente
-      </Button>
+      </button>
+      </div>
       </>
       
       
