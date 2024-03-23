@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { object, string } from 'zod';
+import { Link } from 'react-router-dom'
 
 const schema = object({
     name: string().nonempty({ message: 'El nombre es requerido' }).regex(/^[^\d]+$/, { message: 'El nombre no debe contener números' }),
@@ -76,7 +77,7 @@ const LoginForm = () => {
             <div className='flex flex-row justify-center p-8 gap-10'>
 
                 <button className="h-8 w-auto py-1 px-2 bg-cyan-700 rounded-md text-secondary cursor-pointer hover:bg-tertiary hover:text-primary">LogIn</button>
-                <button className="h-8 w-auto py-1 px-2 bg-cyan-700 rounded-md text-secondary cursor-pointer hover:bg-tertiary hover:text-primary">Register</button>
+               <Link to="/register"> <button className="h-8 w-auto py-1 px-2 bg-cyan-700 rounded-md text-secondary cursor-pointer hover:bg-tertiary hover:text-primary">Register</button></Link>
 
             </div>
 
