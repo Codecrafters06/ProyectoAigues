@@ -1,17 +1,33 @@
-import React, { FC } from 'react';
-import { Layout } from '../../components'
-import IntroComponent from './components/IntroComponent'
-
+import React, { FC } from "react";
+import { Layout } from "../../components";
+import IntroComponent from "./components/IntroComponent";
 
 const Intro: FC = () => {
   return (
     <Layout>
-      <IntroComponent/>
-      <h2 className='font-bold text-center text-sky-700'>Intro</h2>
-
+      <IntroComponent />
+      <div className="flex flex-col justify-center items-center h-screen bg-black">
+        <div className="bg-gray-200 p-8 rounded-lg shadow-lg">
+          <div className-="text-center">
+            <h2 className="text-xl  font-semibold mb-5">
+              AquaQuest Guardianes del Agua
+            </h2>
+            <p className="text-gray-700">
+              Guardián del Agua y embarcarás en una aventura épica para proteger
+              nuestro recurso más preciado! En este emocionante juego,
+              explorarás el fascinante mundo del agua mientras te enfrentas a
+              desafíos, descubres secretos ocultos y te conviertes en un
+              verdadero defensor del planeta. ¿Estás listo para sumergirte en
+              esta increíble misión y convertirte en un héroe del agua?
+            </p>
+          </div>
+        </div>
+        <button className='h-8 w-auto px-4 py-1 bg-cyan-700 text-white rounded-md m-5'>
+              Siguiente
+            </button>
+      </div>
     </Layout>
+  );
+};
 
-  )
-}
-
-export default Intro
+export default Intro;
