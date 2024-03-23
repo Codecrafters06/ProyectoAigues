@@ -3,6 +3,7 @@ import { Layout } from '../../components';
 // import InstructionsComponent from './components/InstructionsComponent';
 
 
+
 const Instructions: FC = () => {
   return (
     <Layout>

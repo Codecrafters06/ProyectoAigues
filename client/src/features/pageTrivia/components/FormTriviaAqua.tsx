@@ -2,7 +2,7 @@ import React from 'react'
 
 const FormTriviaAqua = () => {
     return (
-        <div className='h-80 w-60 bg-slate-400 bg-opacity-70 text-center flex flex-col relative roun'>
+        <div className='h-80 w-60 bg-slate-400 bg-opacity-70 text-center flex flex-col relative rounded-sm'>
             <h4 className='font-bold text-center px-10 py-4'>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. ?
             </h4>
@@ -14,7 +14,7 @@ const FormTriviaAqua = () => {
             </section>
 
             <footer className='bg-opacity-30 bg-cyan-700 h-12 absolute bottom-0 w-full flex justify-center items-center'>
-                <button className='h-8 w-auto p-1 bg-cyan-700 rounded-md'>Comprobar</button>
+                <button className='h-8 w-auto py-1 px-2 bg-cyan-700 rounded-md'>Comprobar</button>
             </footer>
             {/* <footer className='bg-opacity-30 bg-cyan-700 h-12 absolute bottom-0 w-full flex flex-row justify-center items-center'>
                 <p className='text-lg text-auto items-center text-3xl'>✅</p>
