@@ -1,7 +1,7 @@
 import React, { FC, useState } from 'react';
 import { Layout } from '../../components';
 import AvatarComponent from './components/AvatarComponent';
-import backgroundImage from './fondo.png';
+import backgroundImage from '../../assets/building-with-water.png';
 import { Link } from 'react-router-dom'
 
 const Avatars: FC = () => {
