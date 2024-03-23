@@ -1,7 +1,6 @@
 import React, { FC } from 'react';
 import { Layout } from '../../components';
-// import InstructionsComponent from './components/InstructionsComponent';
-
+import { Link } from 'react-router-dom'
 
 
 const Instructions: FC = () => {
@@ -22,9 +21,9 @@ const Instructions: FC = () => {
           
           {/* Botón centrado al final */}
           <div className='mt-5 flex justify-center'>
-            <button className='h-8 w-auto px-4 py-1 bg-cyan-700 text-white rounded-md'>
+            <Link to="/avatars"><button className='h-8 w-auto px-4 py-1 bg-cyan-700 text-white rounded-md'>
               Siguiente
-            </button>
+            </button></Link>
           </div>
         </div>
       </div>
