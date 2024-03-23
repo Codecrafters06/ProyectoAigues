@@ -6,7 +6,7 @@ const Intro: FC = () => {
   return (
     <Layout>
        {/* <IntroComponent /> * */}
-      <div style={{ backgroundImage: `url('/BackgroundIntro.png')`}} className="flex flex-col justify-center items-center h-screen bg-black">
+      <div style={{ backgroundImage: `url('/BackgroundIntro.png')`}} className="flex flex-col justify-center items-center h-screen bg-cover h-screen w-full bg-no-repeat bg-center">
         <div className="bg-gray-50 opacity-65 p-9 rounded-lg shadow-lg m-6">
           <div className-="text-center text-2xl">
             <h2 className="text-xl  font-bold mb-5">
