@@ -14,7 +14,7 @@ export default {
         'accent': '#01BF9B'
       },
       backgroundImage: {
-        'bridge-image': 'url(./assets/bridge-mobile.png)'
+        'bridge-image': 'url(./assets/building-with-water.png)'
       }
     },
   },
