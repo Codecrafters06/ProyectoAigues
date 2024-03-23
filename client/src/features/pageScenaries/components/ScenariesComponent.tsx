@@ -7,6 +7,7 @@ interface AvatarProps {
   onClick: () => void;
 }
 
+
 const AvatarComponent: FC<AvatarProps> = ({ src, alt, selected, onClick }) => {
   return (
     <div
