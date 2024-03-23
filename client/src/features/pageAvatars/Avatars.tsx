@@ -1,7 +1,6 @@
 import React, { FC, useState } from 'react';
 import { Layout } from '../../components';
 import AvatarComponent from './components/AvatarComponent';
-import backgroundImage from '../../assets/building-with-water.png';
 import { Link } from 'react-router-dom'
 
 const Avatars: FC = () => {
@@ -13,7 +12,7 @@ const Avatars: FC = () => {
 
   return (
     <Layout>
-      <div className="h-screen relative" style={{ backgroundImage: `url(${backgroundImage})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
+      <div className="h-screen relative" style={{ backgroundImage: `url('/BackgroundBridgeBlur.png')`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
         <div className="absolute inset-0 bg-white opacity-45" style={{ zIndex: 1 }}></div>
         <h2 className="font-bold text-center text-sky-700 pt-20 " style={{ zIndex: 2 }}>Escoge quién quieres ser</h2>
         <div className="flex justify-center items-center h-full flex-col" style={{ zIndex: 2 }}>

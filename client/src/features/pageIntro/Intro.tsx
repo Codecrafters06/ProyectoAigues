@@ -1,5 +1,6 @@
 import React, { FC } from "react";
 import { Layout } from "../../components";
+import { Link } from 'react-router-dom'
 // import IntroComponent from "./components/IntroComponent";
 
 const Intro: FC = () => {
@@ -23,9 +24,9 @@ const Intro: FC = () => {
             </p>
           </div>
         </div>
-        <button className="h-8 w-left px-4 py-1 bg-cyan-700 text-white rounded-md ">
+        <Link to="/instructions"><button className="h-8 w-left px-4 py-1 bg-cyan-700 text-white rounded-md ">
           Siguiente
-        </button>
+        </button></Link>
       </div>
     </Layout>
   );
