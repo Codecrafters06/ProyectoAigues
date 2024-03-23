@@ -1,11 +1,12 @@
 import React, { FC } from 'react';
 import { Layout } from '../../components';
-import InstructionsComponent from './components/InstructionsComponent';
+// import InstructionsComponent from './components/InstructionsComponent';
+
 
 const Instructions: FC = () => {
   return (
     <Layout>
-      <div className='flex items-center justify-center bg-bridge-image bg-cover h-screen w-full bg-no-repeat bg-center'>
+      <div className='flex items-center justify-center  bg-cover h-screen w-full bg-no-repeat bg-center'>
         <div className='text-center w-10/12'>
           <h1 className=" text-black font-bold mb-5">
             Respondiendo preguntas sobre la preservación del agua:
