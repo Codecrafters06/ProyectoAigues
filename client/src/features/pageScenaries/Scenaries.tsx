@@ -28,6 +28,7 @@ const Scenaries: FC = () => {
           </div>
 
 
+
           <div className="flex flex-col items-center relative w-60" style={{ zIndex: 2 }}>
             <ScenariesComponent
               src="ImageScenarySource.png"

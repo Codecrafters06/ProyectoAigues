@@ -9,6 +9,7 @@ const Avatars: FC = () => {
     setSelectedAvatar(avatarIndex);
   };
 
+  
   return (
     <Layout>
       <div className="h-screen relative" style={{ backgroundImage: `url('/BackgroundBridgeBlur.png')`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>

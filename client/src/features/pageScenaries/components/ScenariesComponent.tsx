@@ -8,6 +8,7 @@ interface AvatarProps {
 }
 
 
+
 const AvatarComponent: FC<AvatarProps> = ({ src, alt, selected, onClick }) => {
   return (
     <div
