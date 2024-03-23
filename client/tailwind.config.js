@@ -15,7 +15,7 @@ export default {
         'cuaternary':'#06B9D3'
       },
       backgroundImage: {
-        'bridge-image': 'url(./assets/bridge-mobile.png)'
+        'bridge-image': 'url(./assets/building-with-water.png)'
       }
     },
   },

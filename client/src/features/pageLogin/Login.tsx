@@ -6,7 +6,7 @@ import LoginForm from './components/LoginForm'
 const Login: FC = () => {
   return (
 
-    <Layout >
+    <>
       <div style={{ backgroundImage: `url('/backgroundLogin.png')`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundPosition: 'center', minHeight: '100vh' }} className="flex flex-col justify-center items-center ">
 
         <LoginForm />
@@ -14,7 +14,7 @@ const Login: FC = () => {
       </div>
       {/* <h2 className='font-bold text-center text-sky-700'>Login</h2> */}
 
-    </Layout>
+    </>
 
   )
 }
