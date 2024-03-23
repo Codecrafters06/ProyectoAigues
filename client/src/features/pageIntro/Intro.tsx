@@ -1,13 +1,13 @@
 import React, { FC } from "react";
 import { Layout } from "../../components";
-import IntroComponent from "./components/IntroComponent";
+// import IntroComponent from "./components/IntroComponent";
 
 const Intro: FC = () => {
   return (
     <Layout>
-      <IntroComponent />
-      <div className="flex flex-col justify-center items-center h-screen bg-black">
-        <div className="bg-gray-200 p-9 rounded-lg shadow-lg m-6">
+       {/* <IntroComponent /> * */}
+      <div style={{ backgroundImage: `url('/BackgroundIntro.png')`}} className="flex flex-col justify-center items-center h-screen bg-black">
+        <div className="bg-gray-50 opacity-65 p-9 rounded-lg shadow-lg m-6">
           <div className-="text-center text-2xl">
             <h2 className="text-xl  font-bold mb-5">
               AquaQuest Guardianes del Agua
@@ -23,7 +23,7 @@ const Intro: FC = () => {
             </p>
           </div>
         </div>
-        <button className="h-8 w-left px-4 py-1 bg-cyan-700 text-white rounded-md m-5">
+        <button className="h-8 w-left px-4 py-1 bg-cyan-700 text-white rounded-md ">
           Siguiente
         </button>
       </div>
