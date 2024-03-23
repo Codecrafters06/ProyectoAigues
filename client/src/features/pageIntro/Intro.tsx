@@ -23,7 +23,7 @@ const Intro: FC = () => {
             </p>
           </div>
         </div>
-        <button className="h-8 w-auto px-4 py-1 bg-cyan-700 text-white rounded-md m-5">
+        <button className="h-8 w-left px-4 py-1 bg-cyan-700 text-white rounded-md m-5">
           Siguiente
         </button>
       </div>
