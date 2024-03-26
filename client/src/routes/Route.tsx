@@ -19,7 +19,6 @@ const RouteWeb = () => {
                 <Route path="/scenaries" element={<Scenaries />} />
                 <Route path="/status" element={<Status />} />
                 <Route path="/trivia" element={<Trivia />} />
-
             </Routes>
         </BrowserRouter>
 

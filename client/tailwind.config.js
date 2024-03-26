@@ -11,7 +11,11 @@ export default {
         'primary': '#F5F5F5',
         'secondary': '#06202B',
         'tertiary': '#014E7E',
-        'accent': '#01BF9B'
+        'accent': '#01BF9B',
+        'cuaternary':'#06B9D3'
+      },
+      backgroundImage: {
+        'bridge-image': 'url(./assets/building-with-water.png)'
       }
     },
   },
