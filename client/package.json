@@ -14,6 +14,7 @@
     "@hookform/resolvers": "^3.3.4",
     "axios": "^1.6.7",
     "jsdom": "^24.0.0",
+    "nodejs": "^0.0.0",
     "react": "^18.2.0",
     "react-animation": "^1.2.2",
     "react-dom": "^18.2.0",

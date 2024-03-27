@@ -14,6 +14,9 @@ dependencies:
   jsdom:
     specifier: ^24.0.0
     version: 24.0.0
+  nodejs:
+    specifier: ^0.0.0
+    version: 0.0.0
   react:
     specifier: ^18.2.0
     version: 18.2.0
@@ -2230,6 +2233,10 @@ packages:
   /node-releases@2.0.14:
     resolution: {integrity: sha512-y10wOWt8yZpqXmOgRo77WaHEmhYQYGNA6y421PKsKYWEK8aW+cqAphborZDhqfyKrbZEN92CN1X2KbafY2s7Yw==}
     dev: true
+
+  /nodejs@0.0.0:
+    resolution: {integrity: sha512-1V+0HwaB/dhxzidEFc4uJ3k52gLI4B6YBZgJIofjwYCSAkD6CI0me6TDBT2QM2nbGWNxCHcq9/wVynzQYZOhUg==}
+    dev: false
 
   /normalize-path@3.0.0:
     resolution: {integrity: sha512-6eZs5Ls3WtCisHWp9S2GUy8dqkpGi4BVSz3GaqiE6ezub0512ESztXUwUB6C6IKbQkY2Pnb/mD4WYojCRwcwLA==}
