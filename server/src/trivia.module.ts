@@ -17,6 +17,7 @@
 //             { name: 'Personaje', schema: PersonajesSchema },
 //             { name: 'Escenario', schema: EscenarioSchema },
 //             { name: 'Pregunta', schema: PreguntaSchema },
+            
 //         ]),
 //     ],
 //     controllers: [PersonajesController, EscenariosController, PreguntasController],
