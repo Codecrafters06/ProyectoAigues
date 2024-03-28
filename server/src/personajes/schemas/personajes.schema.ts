@@ -6,7 +6,7 @@ export type PersonajeDocument = personajes & Document;
 @Schema()
 export class personajes {
   @Prop({ required: true})
-  _id: string;
+  id: string;
 
   @Prop({ required: true})
   name: string;

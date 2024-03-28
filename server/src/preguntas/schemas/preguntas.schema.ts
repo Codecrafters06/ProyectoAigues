@@ -11,7 +11,7 @@ export class Pregunta {
   @Prop()
   pregunta: string;
 
-  @Prop()
+  @Prop({ type: [String]})
   respuestas: {
     correcta: string;
     incorrectas: string[];
