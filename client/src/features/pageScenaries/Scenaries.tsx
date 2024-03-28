@@ -1,17 +1,51 @@
-import React, { FC } from 'react';
-import { Layout } from '../../components'
-import ScenariesComponent from './components/ScenariesComponent'
-
+import React, { FC, useState } from 'react';
+import { Layout } from '../../components';
+import ScenariesComponent from './components/ScenariesComponent';
 
 const Scenaries: FC = () => {
+  const [selectedScenary, setSelectedScenary] = useState<number | null>(null);
+
+  const handleScenaryClick = (scenaryIndex: number) => {
+    setSelectedScenary(scenaryIndex);
+  };
+
   return (
     <Layout>
-      <ScenariesComponent/>
-      <h2 className='font-bold text-center text-sky-700'>Scenaries</h2>
+      <div className="h-screen relative" style={{ backgroundImage: `url('/BackgroundBridgeBlur.png')`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
 
+        <h2 className="font-bold text-center text-sky-700 pt-10 pb-2" style={{ zIndex: 2 }}>Escoge dónde quieres jugar</h2>
+
+        <section className="flex flex-col justify-center gap-4 items-center">
+
+          <div className="flex flex-col items-center relative w-60" style={{ zIndex: 2}}>
+            <ScenariesComponent
+              src="ImageScenaryMuseum.png"
+              alt="Scenary  1"
+              selected={selectedScenary === 1}
+              onClick={() => handleScenaryClick(1)}
+            />
+            <span className="text-center mt-2 text-xs font-inknut-antiqua" style={{ zIndex: 2 }}>El Museu de les Aigües un lugar lleno de maravillas donde los visitantes pueden explorar el ciclo del agua y aprender sobre su importancia.</span>
+          </div>
+
+
+
+          <div className="flex flex-col items-center relative w-60" style={{ zIndex: 2 }}>
+            <ScenariesComponent
+              src="ImageScenarySource.png"
+              alt="Scenary 2"
+              selected={selectedScenary === 2}
+              onClick={() => handleScenaryClick(2)}
+            />
+            <span className="text-center mt-2 text-xs font-inknut-antiqua" style={{ zIndex: 2 }}>El Bosque de los Manantiales, un área natural protegida donde los visitantes pueden ver la belleza del agua en su estado más puro.</span>
+          </div>
+
+
+
+        </section>
+
+      </div>
     </Layout>
+  );
+};
 
-  )
-}
-
-export default Scenaries
+export default Scenaries;

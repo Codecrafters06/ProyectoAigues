@@ -1,12 +1,13 @@
 import React, { FC } from "react";
 import { Layout } from "../../components";
+import { Link } from 'react-router-dom'
 // import IntroComponent from "./components/IntroComponent";
 
 const Intro: FC = () => {
   return (
     <Layout>
        {/* <IntroComponent /> * */}
-      <div style={{ backgroundImage: `url('/BackgroundIntro.png')`}} className="flex flex-col justify-center items-center h-screen bg-cover h-screen w-full bg-no-repeat bg-center">
+      <div style={{ backgroundImage: `url('/BackgroundIntro.png')`}} className="flex flex-col justify-center items-center h-screen bg-cover w-full bg-no-repeat bg-center">
         <div className="bg-gray-50 opacity-65 p-9 rounded-lg shadow-lg m-6">
           <div className-="text-center text-2xl">
             <h2 className="text-xl  font-bold mb-5">
@@ -23,9 +24,9 @@ const Intro: FC = () => {
             </p>
           </div>
         </div>
-        <button className="h-8 w-left px-4 py-1 bg-cyan-700 text-white rounded-md ">
+        <Link to="/instructions"><button className="h-8 w-left px-4 py-1 bg-cyan-700 text-white rounded-md ">
           Siguiente
-        </button>
+        </button></Link>
       </div>
     </Layout>
   );

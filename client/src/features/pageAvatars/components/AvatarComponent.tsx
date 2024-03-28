@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
 
+
 interface AvatarProps {
   src: string; 
   alt: string; 
