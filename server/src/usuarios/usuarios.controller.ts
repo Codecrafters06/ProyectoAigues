@@ -1,59 +1,3 @@
-// import { Controller, Get } from '@nestjs/common';
-// import { UsuariosService } from './usuarios.service';
-
-// @Controller('usuarios')
-// export class UsuariosController {
-//   constructor(private readonly usuariosService: UsuariosService) {}
-
-//   @Get()
-//   findAll() {
-//     return this.usuariosService.findAll();
-//   }
-// }
-// export default UsuariosController;
-
-
-//---------------------------------------------------------------------------------------------------------------------
-// import { Controller, Get, Post, Body, Param, Put, Delete, Res, HttpStatus } from '@nestjs/common';
-// import { UsuariosService } from './usuarios.service';
-// import { Usuarios } from './schemas/usuarios.schema';
-
-// @Controller('usuarios')
-// export class UsuariosController {
-//   constructor(private readonly usuariosService: UsuariosService) {}
-
-//   @Get()
-//   findAll(@Res() response){
-//     const allUsers = this.usuariosService.findAll();
-//     response.status(HttpStatus.OK).json({
-//       message: 'All users', allUsers
-//     })
-//     return this.usuariosService.findAll();
-//   }
-
-//   @Get(':id')
-//   findOne(@Param('id') id: string) {
-//     return this.usuariosService.findOne(id);
-//   }
-
-//   @Post()
-//   create(@Body() usuario: Usuarios) {
-//     return this.usuariosService.create(usuario);
-//   }
-
-//   @Put(':id')
-//   update(@Param('id') id: string, @Body() usuario: Usuarios) {
-//     return this.usuariosService.update(id, usuario);
-//   }
-
-//   @Delete(':id')
-//   delete(@Param('id') id: string) {
-//     return this.usuariosService.delete(id);
-//   }
-// }
-
-//________________________________________________________________________________________________________
-
 import { Controller, Get, Post, Body, Param, Put, Delete, Res, HttpStatus, NotFoundException } from '@nestjs/common';
 import { UsuariosService } from './usuarios.service';
 import { Usuarios } from './schemas/usuarios.schema';
@@ -69,7 +13,7 @@ export class UsuariosController {
       });
     } catch (error) {
       response.status(HttpStatus.INTERNAL_SERVER_ERROR).json({
-        message: 'Erro al obtener usuários',
+        message: 'Error al obtener usuarios',
         error: error.message
       });
     }
@@ -79,7 +23,7 @@ export class UsuariosController {
     try {
       const user = await this.usuariosService.findOne(id);
       response.status(HttpStatus.OK).json({
-        message: 'Usuário encontrado',
+        message: 'Usuario encontrado',
         data: user
       });
     } catch (error) {
@@ -100,12 +44,12 @@ export class UsuariosController {
     try {
       const newUser = await this.usuariosService.create(usuario);
       response.status(HttpStatus.CREATED).json({
-        message: 'Usuário creado con exito',
+        message: 'Usuario creado con exito',
         data: newUser
       });
     } catch (error) {
       response.status(HttpStatus.INTERNAL_SERVER_ERROR).json({
-        message: 'Erro al crear usuário',
+        message: 'Error al crear usuario',
         error: error.message
       });
     }
@@ -125,7 +69,7 @@ export class UsuariosController {
         });
       } else {
         response.status(HttpStatus.INTERNAL_SERVER_ERROR).json({
-          message: 'Erro al atualizar usuário',
+          message: 'Error al actualizar usuario',
           error: error.message
         });
       }
