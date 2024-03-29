@@ -1,7 +1,8 @@
 import React, { FC, useState } from 'react';
 import { Layout } from '../../components';
 import ScenariesComponent from './components/ScenariesComponent';
-import { Link } from 'react-router-dom'
+import Trivia from '../pageTrivia/TriviaPageAquaMuseum'
+import { Link, Route } from 'react-router-dom'
 
 
 const Scenaries: FC = () => {
@@ -17,14 +18,14 @@ const Scenaries: FC = () => {
 
         <h2 className="font-bold text-center text-sky-700 pt-10 pb-2" style={{ zIndex: 2 }}>Escoge dónde quieres jugar</h2>
 
-        <section className="flex flex-col justify-center gap-4 items-center">
+        <section className="flex flex-col justify-center pt-8 gap-4 items-center">
 
-          <div className="flex flex-col items-center relative w-60" style={{ zIndex: 2 }}>
-            <Link to="/trivia">
+          <div className="flex flex-col items-center bg-primary opacity-70 rounded-[10px] p-10 relative w-72" style={{ zIndex: 2 }}>
+            <Link to="/trivia-eco-museum">
               <ScenariesComponent
                 src="ImageScenaryMuseum.png"
                 alt="Scenary  1"
-                selected={selectedScenary === null}
+                selected={selectedScenary === 3}
                 onClick={() => handleScenaryClick(1)}
               />
             </Link>
@@ -34,12 +35,12 @@ const Scenaries: FC = () => {
 
 
 
-          <div className="flex flex-col items-center relative w-60" style={{ zIndex: 2 }}>
-            <Link to="/trivia">
+          <div className="flex flex-col items-center bg-primary opacity-70 rounded-[10px] p-10 relative w-72" style={{ zIndex: 2 }}>
+            <Link to="/trivia-eco-source">
               <ScenariesComponent
                 src="ImageScenarySource.png"
                 alt="Scenary 2"
-                selected={selectedScenary === null}
+                selected={selectedScenary === 4}
                 onClick={() => handleScenaryClick(2)}
               />
             </Link>
@@ -52,6 +53,7 @@ const Scenaries: FC = () => {
         </section>
 
       </div>
+      {/* <Route path="/trivia" element={<Trivia selectedScenary={selectedScenary} />} /> */}
     </Layout>
   );
 };
