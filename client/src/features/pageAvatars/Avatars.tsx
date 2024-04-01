@@ -36,7 +36,10 @@ const Avatars: FC = () => {
               /></Link>
               <span className="text-center mt-2 font-inknut-antiqua" style={{ zIndex: 2 }}>Eco, un entusiasta que busca aprender sobre la preservación del agua y transmitir ese conocimiento a los demás.</span>
             </div>
+
           </div>
+
+          
           <div className="flex flex-col items-center mt-4 relative" style={{ zIndex: 2}}>
           <Link to="/trivia"><AvatarComponent
               src="avatar3.jpg"
