@@ -7,7 +7,7 @@ import { EscenariosModule } from './escenarios/escenarios.module';
 import { UsuariosModule } from './usuarios/usuarios.module';
 
 @Module({
-  imports: [PreguntasModule, MongooseModule.forRoot('mongodb+srv://aiguesfactoria:gntobYwYmvM2ISYe@cluster0.tvvzq92.mongodb.net/Aigues'), EscenariosModule, UsuariosModule],
+  imports: [PreguntasModule, MongooseModule.forRoot('mongodb+srv://aiguesfactoria:gntobYwYmvM2ISYe@cluster0.tvvzq92.mongodb.net/Aigues'), EscenariosModule, UsuariosModule, PersonajesModule],
   controllers: [AppController],
   providers: [AppService],
 })

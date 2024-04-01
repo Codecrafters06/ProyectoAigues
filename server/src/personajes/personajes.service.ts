@@ -1,14 +1,18 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, NotFoundException } from '@nestjs/common';
 import { Model } from 'mongoose';
 import { InjectModel } from '@nestjs/mongoose';
-import { personajes, PersonajeDocument } from './schemas/personajes.schema'; // Import the missing module and its corresponding type declarations.
-
+import { Personajes, PersonajeDocument } from './schemas/personajes.schema';
 @Injectable()
 export class PersonajesService {
-    constructor(@InjectModel('Personaje') private readonly personajeModel: Model<PersonajeDocument>) {}
-
-    async getAllPersonajes(): Promise<personajes[]> {
-        return await this.personajeModel.find().exec();
+    constructor(@InjectModel(Personajes.name) private readonly personajeModel: Model<PersonajeDocument>) {}
+    async findAll(): Promise<Personajes[]> {
+        return this.personajeModel.find().exec();
+    }
+    async findOne(id: string): Promise<Personajes> {
+        const personaje = await this.personajeModel.findById(id).exec();
+        if (!personaje) {
+            throw new NotFoundException('Personaje no encontrado');
+        }
+        return personaje;
     }
 }
-
