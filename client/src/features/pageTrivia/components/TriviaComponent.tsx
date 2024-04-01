@@ -1,6 +1,6 @@
-import React, { FC } from 'react';
+import React from 'react'
 
-const TriviaComponent: FC = () => {
+const TriviaComponent = () => {
   return (
     <div>TriviaComponent</div>
   )
