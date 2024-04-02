@@ -1,15 +1,14 @@
 import { Module } from '@nestjs/common';
-import { TriviaController } from './trivia.controller';
-import { TriviaService } from './trivia.service';
 import { MongooseModule } from '@nestjs/mongoose';
-import { Trivia,TriviaSchema} from './schemas/trivia.schema';
+import { TriviaService } from './trivia.service';
+import { TriviaController } from './trivia.controller';
+import { Trivia, TriviaSchema } from './schemas/trivia.schema';
 
-@Module({ 
+@Module({
   imports: [
-    MongooseModule.forFeature([
-  { name: 'Trivia', schema: TriviaSchema }
-])],  
-controllers: [TriviaController],
-providers: [TriviaService]
+    MongooseModule.forFeature([{ name: 'trivia', schema: TriviaSchema }]), 
+  ],
+  controllers: [TriviaController],
+  providers: [TriviaService],
 })
 export class TriviaModule {}

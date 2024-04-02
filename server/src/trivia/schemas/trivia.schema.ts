@@ -1,23 +1,24 @@
-import { Schema, Prop, SchemaFactory } from "@nestjs/mongoose";
+import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document } from 'mongoose';
 
 export type TriviaDocument = Trivia & Document;
 
-@Schema()
+@Schema({ collection: 'trivia' }) 
 export class Trivia {
-    @Prop ({ unique: true, required: true}) 
-    id: string;
+    @Prop({ required: true })
+    id: number;
 
-    @Prop()
+    @Prop({ required: true })
     nombre: string;
 
     @Prop()
-    pregunta: string;
-
-    @Prop({ type: [String]})
-    repuestas: { 
-    correcta: string;
-    incorrectas: string[];
-};
+    preguntas: {
+        pregunta: string;
+        respuestas: {
+            correcta: string;
+            incorrectas: string[];
+        };
+    }[];
 }
-export const TriviaSchema = SchemaFactory.createForClass(Trivia)
+
+export const TriviaSchema = SchemaFactory.createForClass(Trivia);
