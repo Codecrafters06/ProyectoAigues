@@ -1,12 +1,19 @@
-import { Controller, Get } from '@nestjs/common';
-import { AppService } from './app.service';
+import { Controller, Post, Req, UseGuards, Get } from '@nestjs/common';
+import { AuthService } from './auth/auth.service';
+import { AuthGuard } from '@nestjs/passport';
+import { Request } from 'express';
+import { Usuarios } from './usuarios/schemas/usuarios.schema';
+import { Types } from 'mongoose';
+
 
 @Controller()
 export class AppController {
-  constructor(private readonly appService: AppService) {}
+  constructor(private authService: AuthService) {}
 
-  @Get()
-  getHello(): string {
-    return this.appService.getHello();
-  }
+  @UseGuards(AuthGuard('local'))
+  @Post('auth/signin')
+  signIn(@Req() req: Request & { user: Usuarios & { _id: Types.ObjectId } }) {
+    
+    return this.authService.signIn(req.user);
+  }  
 }
