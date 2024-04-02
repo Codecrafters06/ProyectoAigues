@@ -7,7 +7,7 @@ import { Trivia,TriviaSchema} from './schemas/trivia.schema';
 @Module({ 
   imports: [
     MongooseModule.forFeature([
-  { name: 'Trivia.name', schema: TriviaSchema }
+  { name: 'Trivia', schema: TriviaSchema }
 ])],  
 controllers: [TriviaController],
 providers: [TriviaService]
