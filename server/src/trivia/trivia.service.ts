@@ -16,7 +16,30 @@ export class TriviaService {
     async findOne(id: string): Promise<Trivia> {
         const trivia = await this.triviaModel.findById(id).exec();
         if (!trivia) {
-            throw new NotFoundException('Trivia não encontrada');
+            throw new NotFoundException('Trivia no encontrada');
         }
         return trivia;
-    }}
+    }
+
+    async create(trivia: Trivia): Promise<Trivia> {
+        const newTrivia = new this.triviaModel(trivia);
+        return newTrivia.save();
+    }
+    
+    async update(id: string, trivia: Trivia): Promise<Trivia> {
+        const updateTrivia = await this.triviaModel.findByIdAndUpdate(id, trivia, { new: true }).exec();
+        if (!updateTrivia) {
+            throw new NotFoundException('Trivia no encontrada');
+        }
+        return updateTrivia;
+    }
+    
+    async delete(id: string): Promise<Trivia> {
+        const deletedTrivia = await this.triviaModel.findByIdAndDelete(id).exec();
+        if (!deletedTrivia) {
+            throw new NotFoundException('Trivia no encontrada');
+        }
+        return deletedTrivia;
+    }
+}
+
