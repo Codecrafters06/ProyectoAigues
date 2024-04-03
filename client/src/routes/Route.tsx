@@ -1,5 +1,5 @@
 import { Routes, Route, BrowserRouter } from "react-router-dom";
-import { Home, Avatars, Instructions, Intro, Login, Profile, Ranking, Register, RoadMap, Status, Trivia, ScenariesAqua, ScenariesGotas, ScenariesEco, TriviaPageAquaMuseum, TriviaPageAquaSource, TriviaPageEcoMuseum,TriviaPageEcoSource, TriviaPageGotasMuseum, TriviaPageGotasSource  } from "../features";
+import { Home, Avatars, Instructions, Intro, Login, Profile, Ranking, Register, RoadMap, Status, ScenariesAqua, ScenariesGotas, ScenariesEco, TriviaPageAquaMuseum, TriviaPageAquaSource, TriviaPageEcoMuseum, TriviaPageEcoSource, TriviaPageGotasMuseum, TriviaPageGotasSource } from "../features";
 
 
 const RouteWeb = () => {
