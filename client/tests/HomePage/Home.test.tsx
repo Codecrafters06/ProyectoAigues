@@ -4,7 +4,8 @@ import { describe, it, expect } from 'vitest';
 import { render, screen } from '@testing-library/react';
 import Home from '../../src/features/pageHome/Home';
 import { BrowserRouter } from 'react-router-dom';
-import Dropi from '../../assets/sonrriente-2.png';
+import Dropi from '../../src/assets/';
+import React from 'react';
 // import '@testing-library/jest-dom/extend-expect';
 
 // Tests
