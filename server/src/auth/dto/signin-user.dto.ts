@@ -1,5 +1,5 @@
 export class SignInDto {
-    Usuarioname: string;
+    name: string;
     password: string;
   }
   
