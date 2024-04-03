@@ -6,15 +6,15 @@ import { Trivia, TriviaDocument } from './schemas/trivia.schema';
 @Injectable()
 export class TriviaService {
     constructor(
-        @InjectModel('trivia') private triviaModel: Model<TriviaDocument>, 
+        @InjectModel(Trivia.name) private triviaModel: Model<TriviaDocument>, 
     ) {}
 
-    async getAll(): Promise<Trivia[]> {
-        return this.triviaModel.find().exec();
+    async findAll(): Promise<Trivia[]> {
+        return await this.triviaModel.find().exec();
     }
 
-    async getById(id: string): Promise<Trivia> {
-        const trivia = await this.triviaModel.findOne({ id }).exec();
+    async findOne(id: string): Promise<Trivia> {
+        const trivia = await this.triviaModel.findById(id).exec();
         if (!trivia) {
             throw new NotFoundException('Trivia não encontrada');
         }
