@@ -7,10 +7,6 @@ interface Trivia {
 }
 
 
-
-
-
-
 const TriviaAquaMuseum: React.FC = () => {
     const [trivias, setTrivias] = useState<Trivia[]>([]);
 
