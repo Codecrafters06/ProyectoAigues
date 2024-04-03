@@ -1,0 +1,139 @@
+{
+    "personajes": [
+      {
+        "nombre": "Aqua",
+        "preguntas": [
+          {
+            "pregunta": "¿Cuál es la importancia de los manantiales y los acuíferos en el ciclo natural del agua?",
+            "respuesta": {
+              "correta": "Son reservas de agua dulce esenciales para el equilibrio hidrológico.",
+              "incorrectas": [
+                "Desempeñan un papel secundario en el ciclo del agua.",
+                "Contribuyen principalmente al aumento de la salinidad de los océanos."
+              ]
+            }
+          },
+          {
+            "pregunta": "¿Cómo afecta la deforestación a los ciclos naturales del agua?",
+            "respuesta": {
+              "correta": "La deforestación aumenta la erosión del suelo y reduce su capacidad de retener agua.",
+              "incorrectas": [
+                "La deforestación no tiene ningún impacto en los ciclos naturales del agua.",
+                "La deforestación mejora la capacidad del suelo para retener agua."
+              ]
+            }
+          },
+          {
+            "pregunta": "¿Cuál es la relación entre la evaporación del agua de los océanos y el ciclo del agua?",
+            "respuesta": {
+              "correta": "La evaporación de los océanos proporciona vapor de agua para las nubes, impulsando el ciclo del agua.",
+              "incorrectas": [
+                "La evaporación de los océanos no está relacionada con el ciclo del agua.",
+                "La evaporación de los océanos causa la reducción del nivel del mar."
+              ]
+            }
+          },
+          {
+            "pregunta": "¿Por qué se consideran importantes los ríos y lagos en el ciclo del agua?",
+            "respuesta": {
+              "correta": "Actúan como reservatórios naturales de agua",
+              "incorrectas": [
+                "Son fuentes primarias de agua potable.",
+                "No tienen un papel significativo en el ciclo del agua."
+              ]
+            }
+          },
+          {
+            "pregunta": "¿Cómo contribuye la condensación al ciclo del agua?",
+            "respuesta": {
+              "correta": "Forma nubes a partir del vapor de agua en la atmósfera, que eventualmente precipitan como lluvia.",
+              "incorrectas": [
+                "Convierte el vapor de agua en agua líquida, que luego se libera en los océanos.",
+                "Aumenta la temperatura atmosférica, lo que lleva a condiciones de clima seco."
+              ]
+            }
+          },
+          {
+            "pregunta": "¿De qué forma el derretimiento de los glaciares afecta al ciclo del agua?",
+            "respuesta": {
+              "correta": "Contribuye al aumento del nivel del mar, impactando los ecosistemas costeros.",
+              "incorrectas": [
+                "Aumenta el volumen de agua disponible para los ecosistemas terrestres.",
+                "No influye significativamente en el ciclo del agua."
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "nombre": "Eco",
+        "preguntas": [
+          {
+            "pregunta": "¿Qué significa el concepto de agua virtual cuando hablamos sobre el uso de recursos hídricos?",
+            "respuesta": {
+              "correta": "La cantidad de agua necesaria para hacer alimentos y cosas que usamos en el día a día.",
+              "incorrectas": [
+                "La cantidad de agua que podemos beber directamente.",
+                "La cantidad de agua utilizada para regar plantaciones."
+              ]
+            }
+          },
+          {
+            "pregunta": "¿Cuál es la mejor manera de ahorrar agua al cepillarse los dientes?",
+            "respuesta": {
+              "correta": "Cerrar el grifo mientras se cepillan los dientes.",
+              "incorrectas": [
+                "Dejar el grifo abierto durante todo el cepillado.",
+                "Abrir y cerrar el grifo varias veces durante el cepillado."
+              ]
+            }
+          },
+          {
+            "pregunta": "¿Cómo la adopción de prácticas sostenibles puede ayudar en la conservación de los recursos hídricos?",
+            "respuesta": {
+              "correta": "Reduciendo el desperdicio de agua y promoviendo el uso de fuentes de energía renovable.",
+              "incorrectas": [
+                "Aumentando el uso de productos químicos nocivos.",
+                "Desforestando áreas forestales."
+              ]
+            }
+          },
+          {
+            "pregunta": "¿Cómo podemos enfrentar la escasez de agua en nuestros hogares debido al cambio climático de manera accesible?",
+            "respuesta": {
+              "correta": "Instalando dispositivos ahorradores, como aireadores, en los grifos.",
+              "incorrectas": [
+                "Aumentando el desperdicio de agua.",
+                "Reduciendo el consumo de agua solo en actividades de ocio."
+              ]
+            }
+          },
+          {
+            "pregunta": "Según la OMS, una persona necesita, como mínimo, 50 litros de agua por día para cubrir sus necesidades básicas. ¿Cuál es el consumo diario promedio de agua por persona en Barcelona?",
+            "respuesta": {
+              "correta": "106 litros/día",
+              "incorrectas": [
+                "50 litros/día",
+                "75 litros/día"
+              ]
+            }
+          },
+          {
+            "pregunta": "¿Cuál es la mejor manera de ahorrar agua al lavar la ropa?",
+            "respuesta": {
+              "correta": "Utilizar la lavadora con carga máxima y ciclo de lavado económico.",
+              "incorrectas": [
+                "Utilizar la lavadora con carga máxima solo una vez por semana.",
+                "Lavar la ropa a mano utilizando agua corriente."
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "nombre": "Dr. Gotas",
+        "preguntas": []
+      }
+    ]
+  }
+  
