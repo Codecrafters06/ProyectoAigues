@@ -1,22 +1,45 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, NotFoundException } from '@nestjs/common';
+import { Model } from 'mongoose';
+import { InjectModel } from '@nestjs/mongoose';
+import { Trivia, TriviaDocument } from './schemas/trivia.schema';
 
 @Injectable()
 export class TriviaService {
-    findAll(limit: string) {
-        return `findAll funciona limite de ${limit} registros`;
+    constructor(
+        @InjectModel(Trivia.name) private triviaModel: Model<TriviaDocument>, 
+    ) {}
+
+    async findAll(): Promise<Trivia[]> {
+        return await this.triviaModel.find().exec();
     }
-    findTrivia(triviaId: string) {
-        return `findTrivia funciona con el triviaId = ${triviaId}`;
-    }
-    createTrivia(trivia: any) {
-        console.log(trivia);
+
+    async findOne(id: string): Promise<Trivia> {
+        const trivia = await this.triviaModel.findById(id).exec();
+        if (!trivia) {
+            throw new NotFoundException('Trivia no encontrada');
+        }
         return trivia;
     }
-    updateTrivia(triviaId: string, trivia: any) {
-        console.log(trivia);
-        return `updateTrivia funciona con el triviaId = ${triviaId}`;
+
+    async create(trivia: Trivia): Promise<Trivia> {
+        const newTrivia = new this.triviaModel(trivia);
+        return newTrivia.save();
     }
-    deleteTrivia(triviaId: string) {
-        return `deleteTrivia funciona con el triviaId = ${triviaId}`;
+    
+    async update(id: string, trivia: Trivia): Promise<Trivia> {
+        const updateTrivia = await this.triviaModel.findByIdAndUpdate(id, trivia, { new: true }).exec();
+        if (!updateTrivia) {
+            throw new NotFoundException('Trivia no encontrada');
+        }
+        return updateTrivia;
     }
+    
+    async delete(id: string): Promise<Trivia> {
+        const deletedTrivia = await this.triviaModel.findByIdAndDelete(id).exec();
+        if (!deletedTrivia) {
+            throw new NotFoundException('Trivia no encontrada');
+        }
+        return deletedTrivia;
     }
+}
+

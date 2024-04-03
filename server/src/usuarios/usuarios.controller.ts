@@ -1,33 +1,30 @@
-import { Controller, Get, Param, NotFoundException, Res, HttpStatus, Delete, Post, Body, Put } from '@nestjs/common';
-import { TriviaService } from './trivia.service';
-import { Trivia } from './schemas/trivia.schema';
-
-@Controller('trivia')
-export class TriviaController {
-  constructor(private readonly triviaService: TriviaService) {}
-
+import { Controller, Get, Post, Body, Param, Put, Delete, Res, HttpStatus, NotFoundException } from '@nestjs/common';
+import { UsuariosService } from './usuarios.service';
+import { Usuarios } from './schemas/usuarios.schema';
+@Controller('usuarios')
+export class UsuariosController {
+  constructor(private readonly usuariosService: UsuariosService) {}
   @Get()
-  async findAll(@Res() response) {
+  async findAll(@Res() response){
     try {
-      const allTrivia = await this.triviaService.findAll();
+      const allUsers = await this.usuariosService.findAll();
       response.status(HttpStatus.OK).json({
-        data: allTrivia
+        data: allUsers
       });
     } catch (error) {
       response.status(HttpStatus.INTERNAL_SERVER_ERROR).json({
-        message: 'Error al obtener trivia',
+        message: 'Error al obtener usuarios',
         error: error.message
       });
     }
   }
-
   @Get(':id')
   async findOne(@Param('id') id: string, @Res() response) {
     try {
-      const trivia = await this.triviaService.findOne(id);
+      const user = await this.usuariosService.findOne(id);
       response.status(HttpStatus.OK).json({
-        message: 'Trivia encontrada',
-        data: trivia
+        message: 'Usuario encontrado',
+        data: user
       });
     } catch (error) {
       if (error instanceof NotFoundException) {
@@ -36,36 +33,34 @@ export class TriviaController {
         });
       } else {
         response.status(HttpStatus.INTERNAL_SERVER_ERROR).json({
-          message: 'Erro al obtener trivia',
+          message: 'Erro al obtener usuário',
           error: error.message
         });
       }
     }
   }
-
   @Post()
-  async create(@Body() trivia: Trivia, @Res() response) {
+  async create(@Body() usuario: Usuarios, @Res() response) {
     try {
-      const newTrivia = await this.triviaService.create(trivia);
+      const newUser = await this.usuariosService.create(usuario);
       response.status(HttpStatus.CREATED).json({
-        message: 'Trivia creada con exito',
-        data: newTrivia
+        message: 'Usuario creado con exito',
+        data: newUser
       });
     } catch (error) {
       response.status(HttpStatus.INTERNAL_SERVER_ERROR).json({
-        message: 'Error al crear trivia',
+        message: 'Error al crear usuario',
         error: error.message
       });
     }
   }
-
   @Put(':id')
-  async update(@Param(':id') id: string, @Body() trivia: Trivia, @Res() response) {
+  async update(@Param('id') id: string, @Body() usuario: Usuarios, @Res() response) {
     try {
-      const updateTrivia = await this.triviaService.update(id, trivia);
+      const updatedUser = await this.usuariosService.update(id, usuario);
       response.status(HttpStatus.OK).json({
-        message: 'Trivia actualizada con exito',
-        data: updateTrivia
+        message: 'Usuário atualizado con exito',
+        data: updatedUser
       });
     } catch (error) {
       if (error instanceof NotFoundException) {
@@ -74,25 +69,28 @@ export class TriviaController {
         });
       } else {
         response.status(HttpStatus.INTERNAL_SERVER_ERROR).json({
-          message: 'Error al actualizar trivia',
+          message: 'Error al actualizar usuario',
           error: error.message
         });
       }
     }
   }
-
   @Delete(':id')
   async delete(@Param('id') id: string, @Res() response) {
     try {
-      const deletedTrivia = await this.triviaService.delete(id);
+      const deletedUser = await this.usuariosService.delete(id);
       response.status(HttpStatus.OK).json({
-        message: 'Trivia borrada con exito',
-        data: deletedTrivia
+        message: 'Usuário deletado con exito',
+        data: deletedUser
       });
     } catch (error) {
       if (error instanceof NotFoundException) {
+        response.status(HttpStatus.NOT_FOUND).json({
+          message: error.message
+        });
+      } else {
         response.status(HttpStatus.INTERNAL_SERVER_ERROR).json({
-          message: 'Error al borrar trivia',
+          message: 'Error al deletar usuário',
           error: error.message
         });
       }
