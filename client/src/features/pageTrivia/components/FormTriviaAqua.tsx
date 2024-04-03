@@ -55,7 +55,8 @@ const FormTriviaAqua: React.FC = () => {
             
             )}
         </div>
-    );
-};
 
-export default FormTriviaAqua;
+    )
+}
+
+export default FormTriviaAqua
