@@ -16,25 +16,26 @@ export class AuthService {
     return compare(password, hash);
   }
 
-  async validateUser(name: string, pass: string): Promise<Partial<Usuarios>> {
+  async validateUser(name: string, pass: string) {
     const user = await this.userService.findOne(name);
-
-    if (!user) {
+    let passwordVerified: boolean;
+     
+    if (user) passwordVerified = await this.verifyPassword(pass, user.password);
+    if (!user|| !passwordVerified) 
       throw new UnauthorizedException('Usuario no encontrado');
-    }
 
-    const passwordsEquals = await this.verifyPassword(pass, user.password);
-    if (!passwordsEquals) {
-      throw new UnauthorizedException('Contraseña incorrecta');
-    }
-    
-    const { password: _, ...result } = user;
-
+      const { password, ...result } = user;
     return result;
   }
+    // const passwordsEquals = await this.verifyPassword(pass, user.password);
+    // if (!passwordsEquals) {
+    //   throw new UnauthorizedException('Contraseña incorrecta');
+    
+    
+    
 
-  async signIn(user: Usuarios & { _id: Types.ObjectId }) {
-    const payload = { name: user.name, sub: user._id };
+  async signIn(user: Usuarios) {
+    const payload = { name: user.name, sub: user.id };
     return {
       access_token: this.jwtService.sign(payload),
     };
