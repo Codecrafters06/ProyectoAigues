@@ -13,13 +13,13 @@ export class TriviaService {
     return await this.triviaModel.find().exec();
   }
 
-  async findOne(id: string): Promise<Trivia> {
-    const trivia = await this.triviaModel.findById(id).exec();
-    if (!trivia) {
-      throw new NotFoundException('Trivia no encontrada');
+    async findOne(id: string): Promise<Trivia> {
+        const trivia = await this.triviaModel.findOne({id}).exec();
+        if (!trivia) {
+            throw new NotFoundException('Trivia no encontrada');
+        }
+        return trivia;
     }
-    return trivia;
-  }
 
   async create(trivia: Trivia): Promise<Trivia> {
     const newTrivia = new this.triviaModel(trivia);
