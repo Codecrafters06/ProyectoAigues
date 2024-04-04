@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import FormTriviaAqua from './FormTriviaAqua';
+import FormTriviaAquaSource from './FormTriviaAquaSource';
 
 const TriviaAquaSource: FC = () => {
     return (
@@ -9,7 +9,7 @@ const TriviaAquaSource: FC = () => {
                     {/* <p>TriviaAquaSource</p> */}
                     <img className='w-20 h-20 mx-auto my-auto rounded-sm' src="/aquaAvatar.png" alt="" />
                 </div>
-                <FormTriviaAqua />
+                <FormTriviaAquaSource />
             </div>
 
         </>

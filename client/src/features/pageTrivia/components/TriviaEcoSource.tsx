@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import FormTriviaEco from './FormTriviaEco';
+import FormTriviaEco from './FormTriviaEcoMuseum';
 
 const TriviaEcoSource: FC = () => {
     return (

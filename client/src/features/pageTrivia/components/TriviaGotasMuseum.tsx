@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import FormTriviaDrGotas from './FormTriviaDrGotas';
+import FormTriviaDrGotas from './FormTriviaGotasMuseum';
 
 const TriviaGotasMuseum: FC = () => {
     return (
