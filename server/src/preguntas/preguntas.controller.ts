@@ -12,7 +12,9 @@ export class PreguntasController {
   }
 
   @Get(':escenarioId')
-  async getPreguntasByEscenarioId(@Param('escenarioId') escenarioId: string): Promise<Pregunta[]> {
+  async getPreguntasByEscenarioId(
+    @Param('escenarioId') escenarioId: string,
+  ): Promise<Pregunta[]> {
     return this.preguntasService.getPreguntasByEscenarioId(escenarioId);
   }
 }

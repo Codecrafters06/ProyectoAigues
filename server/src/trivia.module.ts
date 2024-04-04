@@ -1,4 +1,3 @@
-
 // import { Module } from '@nestjs/common';
 // import { MongooseModule } from '@nestjs/mongoose';
 // import { PersonajesController } from './personajes/personajes.controller';
@@ -17,12 +16,10 @@
 //             { name: 'Personaje', schema: PersonajesSchema },
 //             { name: 'Escenario', schema: EscenarioSchema },
 //             { name: 'Pregunta', schema: PreguntaSchema },
-            
+
 //         ]),
 //     ],
 //     controllers: [PersonajesController, EscenariosController, PreguntasController],
 //     providers: [PersonajesService, EscenariosService, PreguntasService],
 // })
 // export class TriviaModule {}
-
- 

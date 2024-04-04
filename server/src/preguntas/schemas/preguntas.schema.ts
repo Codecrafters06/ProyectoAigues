@@ -5,13 +5,13 @@ export type PreguntaDocument = Pregunta & Document;
 
 @Schema()
 export class Pregunta {
-  @Prop({ unique: true, required: true})
-  id: string; 
+  @Prop({ unique: true, required: true })
+  id: string;
 
   @Prop()
   pregunta: string;
 
-  @Prop({ type: [String]})
+  @Prop({ type: [String] })
   respuestas: {
     correcta: string;
     incorrectas: string[];
@@ -19,4 +19,3 @@ export class Pregunta {
 }
 
 export const PreguntaSchema = SchemaFactory.createForClass(Pregunta);
-

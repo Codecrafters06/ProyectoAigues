@@ -7,12 +7,14 @@ import { Trivia, TriviaSchema } from 'src/trivia/schemas/trivia.schema';
 
 @Module({
   imports: [
-    MongooseModule.forFeature([{ name: Usuarios.name, schema: UsuariosSchema }]),  MongooseModule.forFeature([{ name: Trivia.name, schema: TriviaSchema }]), 
+    MongooseModule.forFeature([
+      { name: Usuarios.name, schema: UsuariosSchema },
+    ]),
+    MongooseModule.forFeature([{ name: Trivia.name, schema: TriviaSchema }]),
   ],
-  
+
   controllers: [UsuariosController],
   providers: [UsuariosService],
-  exports: [UsuariosService]
+  exports: [UsuariosService],
 })
 export class UsuariosModule {}
-

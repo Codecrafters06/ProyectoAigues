@@ -5,15 +5,15 @@ export type UsuariosDocument = Usuarios & Document;
 
 @Schema()
 export class Usuarios {
-  @Prop({ unique: true, required: true}) 
-  id: string
+  @Prop({ unique: true, required: true })
+  id: string;
   @Prop()
   name: string;
   @Prop()
   lastname: string;
   @Prop()
   password: string;
-  @Prop({ type: Object, default: { id: 0, points: 0, last_question: 0 }})
+  @Prop({ type: Object, default: { id: 0, points: 0, last_question: 0 } })
   game: {
     id: number;
     points: number;

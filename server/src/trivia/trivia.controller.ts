@@ -1,4 +1,15 @@
-import { Controller, Get, Param, NotFoundException, Res, HttpStatus, Delete, Post, Body, Put } from '@nestjs/common';
+import {
+  Controller,
+  Get,
+  Param,
+  NotFoundException,
+  Res,
+  HttpStatus,
+  Delete,
+  Post,
+  Body,
+  Put,
+} from '@nestjs/common';
 import { TriviaService } from './trivia.service';
 import { Trivia } from './schemas/trivia.schema';
 
@@ -11,12 +22,12 @@ export class TriviaController {
     try {
       const allTrivia = await this.triviaService.findAll();
       response.status(HttpStatus.OK).json({
-        data: allTrivia
+        data: allTrivia,
       });
     } catch (error) {
       response.status(HttpStatus.INTERNAL_SERVER_ERROR).json({
         message: 'Error al obtener trivia',
-        error: error.message
+        error: error.message,
       });
     }
   }
@@ -27,17 +38,17 @@ export class TriviaController {
       const trivia = await this.triviaService.findOne(id);
       response.status(HttpStatus.OK).json({
         message: 'Trivia encontrada',
-        data: trivia
+        data: trivia,
       });
     } catch (error) {
       if (error instanceof NotFoundException) {
         response.status(HttpStatus.NOT_FOUND).json({
-          message: error.message
+          message: error.message,
         });
       } else {
         response.status(HttpStatus.INTERNAL_SERVER_ERROR).json({
           message: 'Erro al obtener trivia',
-          error: error.message
+          error: error.message,
         });
       }
     }
@@ -49,33 +60,37 @@ export class TriviaController {
       const newTrivia = await this.triviaService.create(trivia);
       response.status(HttpStatus.CREATED).json({
         message: 'Trivia creada con exito',
-        data: newTrivia
+        data: newTrivia,
       });
     } catch (error) {
       response.status(HttpStatus.INTERNAL_SERVER_ERROR).json({
         message: 'Error al crear trivia',
-        error: error.message
+        error: error.message,
       });
     }
   }
 
   @Put(':id')
-  async update(@Param(':id') id: string, @Body() trivia: Trivia, @Res() response) {
+  async update(
+    @Param(':id') id: string,
+    @Body() trivia: Trivia,
+    @Res() response,
+  ) {
     try {
       const updateTrivia = await this.triviaService.update(id, trivia);
       response.status(HttpStatus.OK).json({
         message: 'Trivia actualizada con exito',
-        data: updateTrivia
+        data: updateTrivia,
       });
     } catch (error) {
       if (error instanceof NotFoundException) {
         response.status(HttpStatus.NOT_FOUND).json({
-          message: error.message
+          message: error.message,
         });
       } else {
         response.status(HttpStatus.INTERNAL_SERVER_ERROR).json({
           message: 'Error al actualizar trivia',
-          error: error.message
+          error: error.message,
         });
       }
     }
@@ -87,13 +102,13 @@ export class TriviaController {
       const deletedTrivia = await this.triviaService.delete(id);
       response.status(HttpStatus.OK).json({
         message: 'Trivia borrada con exito',
-        data: deletedTrivia
+        data: deletedTrivia,
       });
     } catch (error) {
       if (error instanceof NotFoundException) {
         response.status(HttpStatus.INTERNAL_SERVER_ERROR).json({
           message: 'Error al borrar trivia',
-          error: error.message
+          error: error.message,
         });
       }
     }
