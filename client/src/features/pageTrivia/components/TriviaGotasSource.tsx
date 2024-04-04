@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import FormTriviaDrGotas from './FormTriviaGotasMuseum';
+import FormTriviaGotasSource from './FormTriviaGotasSource';
 
 const TriviaGotasSource: FC = () => {
     return (
@@ -9,7 +9,7 @@ const TriviaGotasSource: FC = () => {
                     {/* <p>TriviaGotasSource</p> */}
                     <img className='w-20 h-20 mx-auto my-auto rounded-sm' src="/gotasAvatar.png" alt="" />
                 </div>
-                <FormTriviaDrGotas />
+                <FormTriviaGotasSource />
             </div>
 
         </>

@@ -21,9 +21,9 @@ const FormTriviaAquaMuseum: React.FC = () => {
     useEffect(() => {
         const fetchTrivia = async () => {
             try {
-                const response = await axios.get('http://localhost:3005/trivia/660c753cb01ae047a695121c');
+                const response = await axios.get('http://localhost:3005/trivia/1');
                 console.log(response.data);
-                
+                console.log("FormTriviaAquaMuseum")
                 setQuestions(response.data.data.preguntas);
             } catch (error) {
                 console.error('Error fetching trivia:', error);
@@ -75,7 +75,7 @@ const FormTriviaAquaMuseum: React.FC = () => {
     return (
         <div className='h-80 w-60 bg-slate-400 bg-opacity-70 text-center flex flex-col relative roun'>
             <h4 className='font-bold text-center px-10 py-4'>
-                {/* {currentQuestion.pregunta} */}
+                {currentQuestion.pregunta}
             </h4>
 
             <section className='flex flex-col p-5'>
