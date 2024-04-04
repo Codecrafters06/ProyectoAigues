@@ -14,7 +14,7 @@ export class TriviaService {
     }
 
     async findOne(id: string): Promise<Trivia> {
-        const trivia = await this.triviaModel.findById(id).exec();
+        const trivia = await this.triviaModel.findOne({id}).exec();
         if (!trivia) {
             throw new NotFoundException('Trivia no encontrada');
         }
