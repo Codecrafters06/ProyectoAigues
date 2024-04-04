@@ -7,6 +7,8 @@ import { EscenariosModule } from './escenarios/escenarios.module';
 import { UsuariosModule } from './usuarios/usuarios.module';
 import { TriviaModule } from './trivia/trivia.module'; 
 import { PersonajesModule } from './personajes/personajes.module';
+import { AuthModule } from './auth/auth.module';
+
 
 @Module({
   imports: [
@@ -16,6 +18,7 @@ import { PersonajesModule } from './personajes/personajes.module';
     UsuariosModule,
     PersonajesModule,
     TriviaModule, 
+    AuthModule
   ],
   controllers: [AppController],
   providers: [AppService],
