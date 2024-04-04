@@ -21,8 +21,10 @@ const FormTriviaAquaMuseum: React.FC = () => {
     useEffect(() => {
         const fetchTrivia = async () => {
             try {
-                const response = await axios.get('http://localhost:3005/trivia/1');
-                setQuestions(response.data.preguntas);
+                const response = await axios.get('http://localhost:3005/trivia/660c753cb01ae047a695121c');
+                console.log(response.data);
+                
+                setQuestions(response.data.data.preguntas);
             } catch (error) {
                 console.error('Error fetching trivia:', error);
             }
@@ -73,7 +75,7 @@ const FormTriviaAquaMuseum: React.FC = () => {
     return (
         <div className='h-80 w-60 bg-slate-400 bg-opacity-70 text-center flex flex-col relative roun'>
             <h4 className='font-bold text-center px-10 py-4'>
-                {currentQuestion.pregunta}
+                {/* {currentQuestion.pregunta} */}
             </h4>
 
             <section className='flex flex-col p-5'>
@@ -89,13 +91,13 @@ const FormTriviaAquaMuseum: React.FC = () => {
             </section>
 
             <footer className='bg-opacity-30 bg-cyan-700 h-12 absolute bottom-0 w-full flex justify-center items-center'>
-                <button
+                {/* <button
                     className={`block w-full p-2 mt-2 border ${selectedAnswer === currentQuestion.respuestas.correcta ? 'bg-gray-300' : ''
                         }`}
                     onClick={() => handleAnswerSelection(currentQuestion.respuestas.correcta)}
                 >
                     {currentQuestion.respuestas.correcta}
-                </button>
+                </button> */}
             </footer>
         </div>
     );
