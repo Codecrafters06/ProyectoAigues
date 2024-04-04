@@ -5,18 +5,17 @@ export type PersonajeDocument = Personajes & Document;
 
 @Schema()
 export class Personajes {
-  @Prop({ required: true})
+  @Prop({ required: true })
   id: string;
 
-  @Prop({ required: true})
+  @Prop({ required: true })
   name: string;
 
-  @Prop({ required: true})
+  @Prop({ required: true })
   avatar: string;
 
-  @Prop({ required: true})
+  @Prop({ required: true })
   description: string;
-
 }
 
 export const PersonajesSchema = SchemaFactory.createForClass(Personajes);

@@ -5,8 +5,8 @@ export type EscenarioDocument = Escenario & Document;
 
 @Schema()
 export class Escenario {
-  @Prop() 
-  id: string
+  @Prop()
+  id: string;
   @Prop()
   name: string;
   @Prop()
@@ -14,5 +14,3 @@ export class Escenario {
 }
 
 export const EscenarioSchema = SchemaFactory.createForClass(Escenario);
-
-
