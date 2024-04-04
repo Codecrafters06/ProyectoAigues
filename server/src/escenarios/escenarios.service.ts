@@ -9,8 +9,8 @@ import { Escenario, EscenarioDocument } from './schemas/escenarios.schema';
 export class EscenariosService {
     constructor(@InjectModel(Escenario.name) private readonly escenarioModel: Model<EscenarioDocument>) {}
 
-    async findAll(): Promise<Escenario[]> {
-        return this.escenarioModel.find().exec();
+    async findAllEscenarios(): Promise<Escenario[]> {
+        return await this.escenarioModel.find().exec();
           }
           async findOne(id: string): Promise<Escenario> {
             const user = await this.escenarioModel.findById(id).exec();

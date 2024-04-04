@@ -25,4 +25,4 @@ const FormTriviaAqua = () => {
     )
 }
 
-export default FormTriviaAqua
+export default FormTriviaAqua 

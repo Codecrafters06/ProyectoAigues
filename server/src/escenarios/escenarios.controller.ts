@@ -8,7 +8,7 @@ export class EscenariosController {
     @Get()
     async findAll(@Res() response){
       try {
-        const allEscenarios = await this.escenariosService.findAll();
+        const allEscenarios = await this.escenariosService.findAllEscenarios();
         response.status(HttpStatus.OK).json({
           data: allEscenarios
         });
@@ -34,7 +34,7 @@ export class EscenariosController {
           });
         } else {
           response.status(HttpStatus.INTERNAL_SERVER_ERROR).json({
-            message: 'Error al obtener ususrio',
+            message: 'Error al obtener usuario',
             error: error.message
           });
         }
