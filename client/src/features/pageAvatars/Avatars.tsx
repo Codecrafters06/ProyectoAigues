@@ -13,7 +13,7 @@ const Avatars: FC = () => {
 
   return (
     <Layout>
-      <div className="h-screen relative flex flex-col items-center" style={{ backgroundImage: `url('/BackgroundBridgeBlur.svg')`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
+      <div className="h-screen relative flex flex-col items-center pt-20" style={{ backgroundImage: `url('/BackgroundBridgeBlur.svg')`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
 
         <h2 className="font-bold text-center text-[#002F6C] bg-opacity bg-primary-70 h-auto w-72 mt-20 p-4 mb-20 bg-primary opacity-70 rounded-[10px] text-[14px]" style={{ zIndex: 2 }}>Escoge quién quieres ser</h2>
         <div className="flex justify-center items-center gap-4 flex-col font-bodyText" style={{ zIndex: 2 }}>
