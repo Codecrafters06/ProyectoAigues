@@ -7,8 +7,8 @@ const Login: FC = () => {
   return (
 
     <>
-      <div style={{ backgroundImage: `url('/backgroundLogin.png')`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundPosition: 'center', minHeight: '100vh' }} className="flex flex-col justify-center items-center ">
-
+      <div style={{ backgroundImage: `url('/backgroundLogin.png')`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundPosition: 'center', minHeight: '100vh'}} className="flex flex-col justify-center items-center ">
+      
         <LoginForm />
 
       </div>
