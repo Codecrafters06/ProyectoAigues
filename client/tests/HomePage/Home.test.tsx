@@ -4,9 +4,9 @@ import { describe, it, expect } from 'vitest';
 import { render, screen } from '@testing-library/react';
 import Home from '../../src/features/pageHome/Home';
 import { BrowserRouter } from 'react-router-dom';
-// import Dropi from '../../src/assets/
 import React from 'react';
-// import '@testing-library/jest-dom/extend-expect';
+import '@testing-library/jest-dom/vitest';
+
 
 // Tests
 describe('<Home />', async () => {
@@ -15,6 +15,7 @@ describe('<Home />', async () => {
         const wrapper = render(<BrowserRouter>
             <Home />
           </BrowserRouter>)
+          screen.debug();
         expect(wrapper).toBeTruthy()
     });
 
@@ -22,10 +23,7 @@ describe('<Home />', async () => {
         render(<BrowserRouter>
             <Home />
           </BrowserRouter>);
-          screen.debug();
         const dropi = screen.getByAltText('Dropi');
         expect(dropi).toBeInTheDocument();
-        // expect(dropi).toHaveAttribute('src', Dropi);
-        // expect(dropi).toHaveAttribute('alt', 'Dropi');
-    });
+  });
 });
