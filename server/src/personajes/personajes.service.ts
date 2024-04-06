@@ -2,6 +2,7 @@ import { Injectable, NotFoundException } from '@nestjs/common';
 import { Model } from 'mongoose';
 import { InjectModel } from '@nestjs/mongoose';
 import { Personajes, PersonajeDocument } from './schemas/personajes.schema';
+
 @Injectable()
 export class PersonajesService {
   constructor(

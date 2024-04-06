@@ -1,7 +1,7 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { EscenariosController } from './escenarios.controller';
 
-describe('ScenariosController', () => {
+describe('EscenariosController', () => {
   let controller: EscenariosController;
 
   beforeEach(async () => {

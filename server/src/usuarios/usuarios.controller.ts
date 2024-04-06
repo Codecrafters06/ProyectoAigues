@@ -12,10 +12,20 @@ import {
 } from '@nestjs/common';
 import { UsuariosService } from './usuarios.service';
 import { Usuarios } from './schemas/usuarios.schema';
+import { ApiTags, ApiOperation, ApiResponse, ApiParam, ApiBody } from '@nestjs/swagger'
+
+@ApiTags('Usuarios')
 @Controller('usuarios')
 export class UsuariosController {
-  constructor(private readonly usuariosService: UsuariosService) {}
+constructor(private readonly usuariosService: UsuariosService) {}
+
+  @ApiOperation({ summary: 'Buscar todos los usuários' })
   @Get()
+  @ApiResponse({ status: 200, description: 'Listado de todos los usuários.', type: [Usuarios]})
+  @ApiResponse({ status: 400, description: 'Erro de solicitação inválida.' })
+  @ApiResponse({ status: 404, description: 'Recurso não encontrado.' })
+  @ApiResponse({ status: 500, description: 'Erro interno do servidor.Contacte al equipo de desarrollo para obtener asistencia adicional.' })
+
   async findAll(@Res() response) {
     try {
       const allUsers = await this.usuariosService.findAll();
@@ -29,7 +39,14 @@ export class UsuariosController {
       });
     }
   }
+
+  @ApiOperation({ summary: 'Buscar el usuario por su ID' })
   @Get(':id')
+  @ApiResponse({ status: 200, description: 'Usuário encontrado.', type: Usuarios })
+  @ApiResponse({ status: 400, description: 'Error de solicitud inválida.' })
+  @ApiResponse({ status: 404, description: 'Recurso no encontrado.' })
+  @ApiResponse({ status: 500, description: 'Error interno del servidor. Contacte al equipo de desarrollo para obtener asistencia adicional.' })
+
   async findOne(@Param('id') id: string, @Res() response) {
     try {
       const user = await this.usuariosService.findOne(id);
@@ -50,7 +67,12 @@ export class UsuariosController {
       }
     }
   }
+
+  @ApiOperation({ summary: 'Crear una nueva trivia'})
   @Post()
+  @ApiResponse({ status: 201, description: 'Usuario creado con éxito.', type: Usuarios})
+  @ApiResponse({ status: 500, description: 'Error interno del servidor. Contacte al equipo de desarrollo para obtener asistencia adicional.'})
+
   async create(@Body() usuario: Usuarios, @Res() response) {
     try {
       const newUser = await this.usuariosService.create(usuario);
@@ -65,7 +87,13 @@ export class UsuariosController {
       });
     }
   }
+
+  @ApiOperation({ summary: 'Actualizar un usuario existente por su ID'})
   @Put(':id')
+  @ApiResponse({ status: 200, description: 'Usuario actualizado con éxito.', type: Usuarios })
+  @ApiResponse({ status: 404, description: 'Usuario no encontrado.'})
+  @ApiResponse({ status: 500, description: 'Error interno del servidor. Contacte al equipo de desarrollo para obtener asistencia adicional.'})
+  
   async update(
     @Param('id') id: string,
     @Body() usuario: Usuarios,
@@ -90,7 +118,13 @@ export class UsuariosController {
       }
     }
   }
+
+  @ApiOperation({ summary: 'Eliminar un usuario existente por su ID' })
   @Delete(':id')
+  @ApiResponse({  status: 200, description: 'Usuario eliminado con éxito.' })
+  @ApiResponse({ status: 404, description: 'Usuario no encontrado.' })
+  @ApiResponse({ status: 500, description: 'Error interno del servidor. Contacte al equipo de desarrollo para obtener asistencia adicional.' })
+
   async delete(@Param('id') id: string, @Res() response) {
     try {
       const deletedUser = await this.usuariosService.delete(id);

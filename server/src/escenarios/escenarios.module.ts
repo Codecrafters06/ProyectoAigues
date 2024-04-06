@@ -9,6 +9,6 @@ import { EscenarioSchema } from './schemas/escenarios.schema';
     MongooseModule.forFeature([{ name: 'Escenario', schema: EscenarioSchema }]),
   ],
   controllers: [EscenariosController],
-  providers: [EscenariosService], // Fixed the typo here
+  providers: [EscenariosService], 
 })
 export class EscenariosModule {}

@@ -31,7 +31,7 @@ export class TriviaService {
       .findByIdAndUpdate(id, trivia, { new: true })
       .exec();
     if (!updateTrivia) {
-      throw new NotFoundException('Trivia no encontrada');
+      throw new NotFoundException('Trivia actualizada');
     }
     return updateTrivia;
   }
@@ -39,7 +39,7 @@ export class TriviaService {
   async delete(id: string): Promise<Trivia> {
     const deletedTrivia = await this.triviaModel.findByIdAndDelete(id).exec();
     if (!deletedTrivia) {
-      throw new NotFoundException('Trivia no encontrada');
+      throw new NotFoundException('Trivia eliminada');
     }
     return deletedTrivia;
   }
