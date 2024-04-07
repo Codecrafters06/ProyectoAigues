@@ -33,7 +33,7 @@ const FormTriviaAquaSource: React.FC = () => {
     useEffect(() => {
         const fetchTrivia = async () => {
             try {
-                const response = await axios.get('http://localhost:3005/trivia/2');
+                const response = await axios.get('https://proyectoaigues-production.up.railway.app/trivia/2');
                 console.log(response.data);
 
                 setQuestions(response.data.data.preguntas);

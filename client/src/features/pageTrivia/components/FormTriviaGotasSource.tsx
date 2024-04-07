@@ -33,7 +33,7 @@ const FormTriviaGotasSource: React.FC = () => {
     useEffect(() => {
         const fetchTrivia = async () => {
             try {
-                const response = await axios.get('http://localhost:3005/trivia/6');
+                const response = await axios.get('https://proyectoaigues-production.up.railway.app/trivia/6');
                 console.log(response.data);
 
                 setQuestions(response.data.data.preguntas);
