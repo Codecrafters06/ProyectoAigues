@@ -19,3 +19,20 @@
   -moz-osx-font-smoothing: grayscale;
 
 } */
+
+@keyframes animate-jump {
+  0% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-10px);
+  }
+  100% {
+      transform: translateY(0);
+  }
+}
+
+.animate-jump {
+  animation: animate-jump 0.5s ease infinite;
+  filter: drop-shadow(5px 5px white);
+}

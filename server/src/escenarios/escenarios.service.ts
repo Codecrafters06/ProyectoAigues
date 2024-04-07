@@ -16,7 +16,7 @@ export class EscenariosService {
   async findOne(id: string): Promise<Escenario> {
     const user = await this.escenarioModel.findById(id).exec();
     if (!user) {
-      throw new NotFoundException('Usuário no encontrado');
+      throw new NotFoundException('Escenário no encontrado');
     }
     return user;
   }

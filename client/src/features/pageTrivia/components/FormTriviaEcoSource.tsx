@@ -16,7 +16,7 @@ function jsNota(frecuencia: number) {
     const o = context.createOscillator();
     const g = context.createGain();
     o.connect(g);
-    o.type = "triangle";
+    o.type = "square";
     o.frequency.value = frecuencia;
     g.connect(context.destination);
     o.start(0);
@@ -61,19 +61,19 @@ const FormTriviaEcoSource: React.FC = () => {
     const handleAnswerSelection = (answer: string) => {
         setSelectedAnswer(answer);
         if (answer === currentQuestion.respuestas.correcta) {
-            jsNota(261.626);
+            jsNota(659.255);
             setTimeout(() => {
-            setCurrentQuestionIndex(prevIndex => {
-                if (prevIndex === questions.length - 1) {
-                    navigate('/avatars');
-                    return prevIndex;
-                }
-                return prevIndex + 1;
-            });
-            setSelectedAnswer(null);
-        }, 1500);
+                setCurrentQuestionIndex(prevIndex => {
+                    if (prevIndex === questions.length - 1) {
+                        navigate('/avatars');
+                        return prevIndex;
+                    }
+                    return prevIndex + 1;
+                });
+                setSelectedAnswer(null);
+            }, 3000);
         } else {
-            jsNota(195.998);
+            jsNota(100);
         }
     };
 
@@ -91,7 +91,10 @@ const FormTriviaEcoSource: React.FC = () => {
                     {shuffledAnswers.map((answer, index) => (
                         <button
                             key={index}
-                            className='rounded-md leading-[14px] p-5 mx-3 h-auto bg-stone-50 opacity-65'
+                            className={`rounded-md leading-[14px] p-5 mx-3 h-auto 
+                            ${selectedAnswer !== null && selectedAnswer === answer && selectedAnswer !== currentQuestion.respuestas.correcta ? 'border-4 border-red-500 bg-stone-50 opacity-65' : 
+                            selectedAnswer !== null && selectedAnswer === answer ? 'border-4 border-green-900 bg-stone-50 opacity-65' : 
+                            'bg-stone-50 opacity-65'}`}
                             onClick={() => handleAnswerSelection(answer)}
                         >
                             {answer}
@@ -99,10 +102,11 @@ const FormTriviaEcoSource: React.FC = () => {
                     ))}
                 </section>
 
-                <footer className='bg-opacity-30 bg-cyan-700 h-16 bottom-0 w-full flex justify-center items-center'>
+                <footer className={`h-16 bottom-0 w-full flex justify-center items-center ${selectedAnswer !== null && selectedAnswer === currentQuestion.respuestas.correcta ? 'bg-green-700 bg-opacity-40' :
+                    selectedAnswer !== null ? 'bg-red-500' : 'bg-cyan-700 bg-opacity-30'}`}>
                     {selectedAnswer !== null && (
                         <img
-                            className='h-14'
+                            className={`h-14 ${selectedAnswer === currentQuestion.respuestas.correcta ? 'animate-jump' : ''}`}
                             src={selectedAnswer === currentQuestion.respuestas.correcta ? './sonrriente-2.png' : './icon512x.png'}
                             alt='avatares de respuesta'
                         />
