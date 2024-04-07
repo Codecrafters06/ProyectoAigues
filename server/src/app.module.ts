@@ -14,7 +14,7 @@ import { ConfigModule } from '@nestjs/config';
     ConfigModule.forRoot(),
     PreguntasModule,
     MongooseModule.forRoot(
-      `mongodb+srv://${process.env.MONGODB_USER}:${process.env.MONGODB_PASSWORD}@${process.env.MONGODB_CLUSTER}/${process.env.MONGODB_DATABASE}`,
+      `mongodb+srv://${process.env.MONGODB_USER}:${process.env.MONGODB_PASS}@${process.env.MONGODB_CLUSTER}/${process.env.MONGODB_DATABASE}`,
     ),
     EscenariosModule,
     UsuariosModule,
