@@ -9,7 +9,7 @@ export default defineConfig({
     VitePWA({
       manifest:{
         display:"standalone",
-        display_override:['window-controls-overlay',"minimal-ui"],
+        display_override:['window-controls-overlay'],
         lang: 'es-ES',
         name: 'Museo Aigues de Barcelona',
         short_name:'Museo de las Aigues',
