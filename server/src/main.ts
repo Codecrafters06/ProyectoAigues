@@ -5,6 +5,7 @@ import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.enableCors();
+<<<<<<< HEAD
 
   const config = new DocumentBuilder()
     .setTitle('Proyecto Aigues')
@@ -17,6 +18,9 @@ async function bootstrap() {
   SwaggerModule.setup('api', app, document)
  
   await app.listen(3005);
+=======
+  await app.listen(process.env.PORT || 3005);
+>>>>>>> feat-deploy-backend-pruebas
 }
 
 bootstrap();
