@@ -22,9 +22,9 @@ constructor(private readonly usuariosService: UsuariosService) {}
   @ApiOperation({ summary: 'Buscar todos los usuários' })
   @Get()
   @ApiResponse({ status: 200, description: 'Listado de todos los usuários.', type: [Usuarios]})
-  @ApiResponse({ status: 400, description: 'Erro de solicitação inválida.' })
-  @ApiResponse({ status: 404, description: 'Recurso não encontrado.' })
-  @ApiResponse({ status: 500, description: 'Erro interno do servidor.Contacte al equipo de desarrollo para obtener asistencia adicional.' })
+  @ApiResponse({ status: 400, description: 'Error de solicitación inválida.' })
+  @ApiResponse({ status: 404, description: 'Recurso no encontrado.' })
+  @ApiResponse({ status: 500, description: 'Error interno del servidor.Contacte al equipo de desarrollo para obtener asistencia adicional.' })
 
   async findAll(@Res() response) {
     try {
@@ -61,7 +61,7 @@ constructor(private readonly usuariosService: UsuariosService) {}
         });
       } else {
         response.status(HttpStatus.INTERNAL_SERVER_ERROR).json({
-          message: 'Erro al obtener usuário',
+          message: 'Error al obtener usuário',
           error: error.message,
         });
       }
@@ -129,7 +129,7 @@ constructor(private readonly usuariosService: UsuariosService) {}
     try {
       const deletedUser = await this.usuariosService.delete(id);
       response.status(HttpStatus.OK).json({
-        message: 'Usuário deletado con exito',
+        message: 'Usuário eliminado con exito',
         data: deletedUser,
       });
     } catch (error) {
@@ -139,7 +139,7 @@ constructor(private readonly usuariosService: UsuariosService) {}
         });
       } else {
         response.status(HttpStatus.INTERNAL_SERVER_ERROR).json({
-          message: 'Error al deletar usuário',
+          message: 'Error al eliminar usuário',
           error: error.message,
         });
       }

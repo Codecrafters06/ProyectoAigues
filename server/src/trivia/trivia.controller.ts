@@ -23,9 +23,9 @@ export class TriviaController {
   @ApiOperation({ summary: 'Buscar todas las trivias' })
   @Get()
   @ApiResponse({ status: 200, description: 'Listado de todas las trivias.', type: [Trivia]})
-  @ApiResponse({ status: 400, description: 'Erro de solicitação inválida.' })
-  @ApiResponse({ status: 404, description: 'Recurso não encontrado.' })
-  @ApiResponse({ status: 500, description: 'Erro interno do servidor.Contacte al equipo de desarrollo para obtener asistencia adicional.' })
+  @ApiResponse({ status: 400, description: 'Error de solicitación inválida.' })
+  @ApiResponse({ status: 404, description: 'Recurso no encontrado.' })
+  @ApiResponse({ status: 500, description: 'Error interno del servidor.Contacte al equipo de desarrollo para obtener asistencia adicional.' })
 
   async findAll(@Res() response) {
     try {
@@ -44,9 +44,9 @@ export class TriviaController {
   @ApiOperation({ summary: 'Buscar la trivia por su ID' })
   @Get(':id')
   @ApiResponse({ status: 200, description: 'Trivia encontrada.', type: [Trivia]})
-  @ApiResponse({ status: 400, description: 'Erro de solicitação inválida.' })
-  @ApiResponse({ status: 404, description: 'Recurso não encontrado.' })
-  @ApiResponse({ status: 500, description: 'Erro interno do servidor.Contacte al equipo de desarrollo para obtener asistencia adicional.' })
+  @ApiResponse({ status: 400, description: 'Error de solicitacion inválida.' })
+  @ApiResponse({ status: 404, description: 'Recurso no encontrado.' })
+  @ApiResponse({ status: 500, description: 'Error interno del servidor.Contacte al equipo de desarrollo para obtener asistencia adicional.' })
 
   async findOne(@Param('id') id: string, @Res() response) {
     try {
@@ -62,7 +62,7 @@ export class TriviaController {
         });
       } else {
         response.status(HttpStatus.INTERNAL_SERVER_ERROR).json({
-          message: 'Erro al obtener trivia',
+          message: 'Error al obtener trivia',
           error: error.message,
         });
       }

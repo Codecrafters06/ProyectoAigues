@@ -12,9 +12,9 @@ export class PreguntasController {
   @ApiOperation({ summary: 'Buscar todas las preguntas' })
   @Get()
   @ApiResponse({ status: 200, description: 'Listado de todas las preguntas.', type: [Pregunta]})
-  @ApiResponse({ status: 400, description: 'Erro de solicitação inválida.' })
-  @ApiResponse({ status: 404, description: 'Recurso não encontrado.' })
-  @ApiResponse({ status: 500, description: 'Erro interno do servidor.Contacte al equipo de desarrollo para obtener asistencia adicional.' })
+  @ApiResponse({ status: 400, description: 'Error de solicitación inválida.' })
+  @ApiResponse({ status: 404, description: 'Recurso no encontrado.' })
+  @ApiResponse({ status: 500, description: 'Error interno del servidor.Contacte al equipo de desarrollo para obtener asistencia adicional.' })
 
   async getAllPreguntas(): Promise<Pregunta[]> {
     return this.preguntasService.getAllPreguntas();
@@ -23,9 +23,9 @@ export class PreguntasController {
   @ApiOperation({ summary: 'Buscar preguntas por ID' })
   @Get(':escenarioId')
   @ApiResponse({ status: 200, description: 'Pregunta encontrada.', type: [Pregunta]})
-  @ApiResponse({ status: 400, description: 'Erro de solicitação inválida.' })
-  @ApiResponse({ status: 404, description: 'Recurso não encontrado.' })
-  @ApiResponse({ status: 500, description: 'Erro interno do servidor.Contacte al equipo de desarrollo para obtener asistencia adicional.' })
+  @ApiResponse({ status: 400, description: 'Error de solicitación inválida.' })
+  @ApiResponse({ status: 404, description: 'Recurso no encontrado.' })
+  @ApiResponse({ status: 500, description: 'Error interno del servidor.Contacte al equipo de desarrollo para obtener asistencia adicional.' })
 
   async getPreguntasByEscenarioId(
     @Param('escenarioId') escenarioId: string,

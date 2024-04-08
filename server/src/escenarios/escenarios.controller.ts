@@ -18,9 +18,9 @@ constructor(private readonly escenariosService: EscenariosService) {}
   @ApiOperation({ summary: 'Buscar todos los escenarios' })
   @Get()
   @ApiResponse({ status: 200, description: 'Listado de todos los escenarios.', type: [Escenario]})
-  @ApiResponse({ status: 400, description: 'Erro de solicitação inválida.' })
-  @ApiResponse({ status: 404, description: 'Recurso não encontrado.' })
-  @ApiResponse({ status: 500, description: 'Erro interno do servidor.Contacte al equipo de desarrollo para obtener asistencia adicional.' })
+  @ApiResponse({ status: 400, description: 'Error de solicitación inválida.' })
+  @ApiResponse({ status: 404, description: 'Recurso no encontrado.' })
+  @ApiResponse({ status: 500, description: 'Error interno del servidor.Contacte al equipo de desarrollo para obtener asistencia adicional.' })
 
   async findAll(@Res() response) {
     try {
